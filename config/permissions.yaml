@@ -1,0 +1,42 @@
+# OpenClaw Tool Permissions
+
+tools:
+  shell:
+    risk: high
+    require_approval: true
+    allowed_roles: [admin]
+    description: "Execute shell commands"
+    allowed_commands: ["echo","ls","cat","pwd","whoami","date","systemctl","service","journalctl","tail","grep","df","du","free","ps"]
+  docker_restart:
+    risk: medium
+    require_approval: true
+    allowed_roles: [admin, operator]
+    description: "Restart a Docker container"
+  docker_stop:
+    risk: high
+    require_approval: true
+    allowed_roles: [admin]
+  disk_clean:
+    risk: low
+    auto_execute: true
+    allowed_roles: [admin, operator]
+  file_read:
+    risk: low
+    auto_execute: true
+    allowed_roles: [admin, operator, viewer]
+  file_write:
+    risk: medium
+    require_approval: true
+    allowed_roles: [admin, operator]
+  github_create_issue:
+    risk: low
+    auto_execute: true
+    allowed_roles: [admin, operator]
+  github_close_issue:
+    risk: medium
+    require_approval: true
+    allowed_roles: [admin]
+
+defaults:
+  auto_execute_risk: [low]
+  require_approval_risk: [medium, high]

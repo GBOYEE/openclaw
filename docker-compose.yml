@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_USER=openclaw
+      - POSTGRES_PASSWORD=openclaw
+      - POSTGRES_DB=openclaw
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U openclaw"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - OPENCLAW_ENV=production
+      - OPENCLAW_PORT=8080
+      - OPENCLAW_DATABASE_URL=postgresql+psycopg2://openclaw:openclaw@postgres/openclaw
+      - OPENCLAW_PERMISSIONS=/app/polish/openclaw/config/permissions.yaml
+      - OPENCLAW_SECRET=${OPENCLAW_SECRET:-change-me-in-prod}
+      - OPENCLAW_RATE_LIMIT=${OPENCLAW_RATE_LIMIT:-60}
+    volumes:
+      - ./config:/app/polish/openclaw/config:ro  # mount permissions for hot-reload
+      - ./logs:/app/logs
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+volumes:
+  postgres_data:
