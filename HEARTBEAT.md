@@ -1,0 +1,1 @@
+python3 /root/.openclaw/workspace/skills/proactive-coach/coach.py --maybe-check-in

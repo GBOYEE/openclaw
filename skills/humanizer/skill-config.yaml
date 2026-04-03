@@ -1,0 +1,7 @@
+# Humanizer Skill Configuration
+
+contraction_probability: 0.9
+hedging_strength: 0.2
+emoji_frequency: 0.1
+exclamation_max: 1
+apology_when_appropriate: true

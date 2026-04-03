@@ -1,0 +1,149 @@
+# Target Companies for AI Automation Engineer role (initial list)
+
+# Criteria: remote-friendly, use AI/automation, would value agent-core/automation-engine skills
+# Contact: find hiring managers or engineering leads via LinkedIn or company site
+
+- company: OpenAI
+  url: https://openai.com
+  reason: "Leading AI research and deployment; they build agents and tool use"
+  remote: true
+  tech: ["PyTorch", "LLMs", "API"]
+  contact: "hiring@openai.com"  # general
+
+- company: Cohere
+  url: https://cohere.com
+  reason: "Enterprise LLM platform; need automation integration"
+  remote: true
+  tech: ["NLP", "LLMs", "RAG"]
+  contact: " careers@cohere.com"
+
+- company: Adept AI
+  url: https://adept.ai
+  reason: "AI agents that perform tasks; perfect fit for agent-core philosophy"
+  remote: true
+  tech: ["LLMs", "agents", "tool use"]
+  contact: " talent@adept.ai"
+
+- company: Together AI
+  url: https://together.ai
+  reason: "Cloud for LLMs; need automation for infra and platform"
+  remote: true
+  tech: ["Go", "Python", "Kubernetes"]
+  contact: " careers@together.ai"
+
+- company: Anyscale
+  url: https://anyscale.com
+  reason: "Ray cluster computing for AI; automation for ops"
+  remote: true
+  tech: ["Ray", "Python", "distributed"]
+  contact: " jobs@anyscale.com"
+
+- company: LangChain
+  url: https://langchain.com
+  reason: "Framework for LLM apps; they'd appreciate GSD-built agent framework"
+  remote: true
+  tech: ["Python", "TypeScript", "LLMs"]
+  contact: " careers@langchain.com"
+
+- company: Modal
+  url: https://modal.com
+  reason: "Serverless GPU platform; automation for deployments"
+  remote: true
+  tech: ["Python", "Kubernetes", "serverless"]
+  contact: " hiring@modal.com"
+
+- company: Replicate
+  url: https://replicate.com
+  reason: "Host ML models; need automation for scaling and monitoring"
+  remote: true
+  tech: ["Python", "Docker", "ML"]
+  contact: " jobs@replicate.com"
+
+- company: RunPod
+  url: https://runpod.io
+  reason: "GPU cloud; automation for orchestration"
+  remote: true
+  tech: ["Go", "K8s", "cloud"]
+  contact: " careers@runpod.io"
+
+- company: Stability AI
+  url: https://stability.ai
+  reason: "Generative AI models; automation for training and serving"
+  remote: true
+  tech: ["PyTorch", "diffusion", "MLOps"]
+  contact: " careers@stability.ai"
+
+- company: Kakao Brain
+  url: https://kakaobrain.com
+  reason: "AI research; need robust engineering for experiments"
+  remote: partial
+  tech: ["Python", "TensorFlow", "research"]
+  contact: " contact@kakaobrain.com"
+
+- company: Cloudflare (AI team)
+  url: https://cloudflare.com
+  reason: "Workers AI and automation for edge; large scale infra"
+  remote: true
+  tech: ["Rust", "Go", "JavaScript"]
+  contact: " careers@cloudflare.com"
+
+- company: Hugging Face
+  url: https://huggingface.co
+  reason: "ML platform; automation for datasets, models, spaces"
+  remote: true
+  tech: ["Python", "Rust", "Next.js"]
+  contact: " careers@huggingface.co"
+
+- company: Banana.dev
+  url: https://banana.dev
+  reason: "Serverless GPU inference; automation for model serving"
+  remote: true
+  tech: ["Go", "K8s", "ML"]
+  contact: " hello@banana.dev"
+
+- company: Ema
+  url: https://ema.ai
+  reason: "AI-driven automation for knowledge work; direct fit"
+  remote: true
+  tech: ["LLMs", "agents"]
+  contact: " careers@ema.ai"
+
+- company: XBOW
+  url: https://xbow.com
+  reason: "AI for security; need automation for scanning and response"
+  remote: true
+  tech: ["Go", "Python", "security"]
+  contact: " jobs@xbow.com"
+
+- company: Doppel
+  url: https://doppel.com
+  reason: "AI-native security platform; automation core"
+  remote: true
+  tech: ["Python", "LLMs", "security"]
+  contact: " careers@doppel.com"
+
+- company: Rad AI
+  url: https://rad.ai
+  reason: "AI for radiology; automation of reports"
+  remote: true
+  tech: ["Python", "NLP", "healthcare"]
+  contact: " hiring@rad.ai"
+
+- company: Kinta AI
+  url: https://kinta.ai
+  reason: "Manufacturing planning automation; need robust backend"
+  remote: true
+  tech: ["Python", "OR-Tools", "logistics"]
+  contact: " careers@kinta.ai"
+
+- company: Obviously AI
+  url: https://obviously.ai
+  reason: "No-code AI; platform automation and integrations"
+  remote: true
+  tech: ["Python", "React", "ML"]
+  contact: " jobs@obviously.ai"
+
+# Additional (mid-term)
+# - Quant trading firms (Citadel, Two Sigma, Jane Street) — use AI automation for trading infra
+# - UiPath, Automation Anywhere — RPA + AI
+# - ServiceNow, IBM, Accenture — enterprise automation
