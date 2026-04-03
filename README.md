@@ -8,7 +8,7 @@ I've got three powerful brains working together:
 
 - **agent-core** — my thinking center: plans, remembers, picks tools, learns from mistakes, and even coordinates multiple agents
 - **automation-engine** — my hands: runs scheduled jobs, listens for webhooks, watches files, with built-in retries and alerts
-- **trading-lab** — my analytical side: backtests strategies, optimizes parameters, simulates trading with a slick UI
+- **trading-lab** — my analytical side: backtests strategies, optimizes parameters, and simulates trading with a slick UI
 
 All three are production-ready (v1.0.0), fully tested, and documented. We built 'em with GSD discipline — no shortcuts.
 
@@ -42,23 +42,41 @@ automation-engine config.yaml dashboard
 trading-lab ui
 ```
 
-## My structure
+## My architecture
 
+```mermaid
+flowchart TB
+    GW[Gateway API]
+    AC[agent-core]
+    AE[automation-engine]
+    TL[trading-lab]
+    MEM[Memory]
+    TOOLS[Tools / Skills]
+
+    GW --> AC
+    GW --> AE
+    GW --> TL
+
+    AC --> MEM
+    AE --> MEM
+    TL --> MEM
+
+    AC --> TOOLS
+    AE --> TOOLS
+    TL --> TOOLS
+
+    subgraph "External"
+        CLI[CLI / Chat]
+        WEB[Webhooks]
+        SCHED[Cron]
+    end
+
+    CLI --> GW
+    WEB --> GW
+    SCHED --> GW
 ```
-openclaw/
-├── core/              # My brains (git submodules)
-│   ├── agent-core/
-│   ├── automation-engine/
-│   └── trading-lab/
-├── .claude/          # Skills & commands
-├── gateway.py        # That's me — FastAPI gateway
-├── config.yaml       # My config
-├── skills/           # Extra powers
-├── memory/           # My logs & long-term memory
-├── IDENTITY.md       # Who I am
-├── SOUL.md           # My principles
-└── README.md         # You're here
-```
+
+---
 
 ## Status
 
