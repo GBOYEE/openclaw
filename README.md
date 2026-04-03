@@ -2,6 +2,9 @@
 
 I'm not just a gateway — I'm your all-in-one AI automation workspace. Think of me as your digital twin that builds, runs, and learns alongside you.
 
+[![CI](https://github.com/GBOYEE/openclaw/actions/workflows/ci.yml/badge.svg)](https://github.com/GBOYEE/openclaw/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 ## What's inside?
 
 I've got three powerful brains working together:
