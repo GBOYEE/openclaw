@@ -1,0 +1,39 @@
+# Telegram Skill Configuration
+
+skill:
+  name: "telegram_send_file"
+  description: "Send files to Telegram chats reliably with retry logic"
+  version: "1.0.0"
+  author: "GBOYEE"
+  tags: [messaging, notification, file-transfer]
+
+parameters:
+  inputs:
+    - name: "file_path"
+      type: "string"
+      required: true
+      description: "Path to the file to send"
+    - name: "chat_id"
+      type: "string"
+      required: false
+      description: "Telegram chat ID (uses TELEGRAM_DEFAULT_CHAT_ID if not provided)"
+    - name: "caption"
+      type: "string"
+      required: false
+      description: "Optional message caption"
+    - name: "bot_token"
+      type: "string"
+      required: false
+      description: "Bot token (uses TELEGRAM_BOT_TOKEN env var if not provided)"
+
+executor:
+  module: "skills.telegram.send_file"
+  function: "send_file_with_config"
+
+runtime:
+  max_retries: 3
+  timeout: 60
+
+environment:
+  - "TELEGRAM_BOT_TOKEN"
+  - "TELEGRAM_DEFAULT_CHAT_ID"
